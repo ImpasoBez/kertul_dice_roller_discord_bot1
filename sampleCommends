@@ -1,0 +1,15 @@
+!roll 1d6                   Jedna kość d6 rzut
+!roll 2d6+2                 Dwie kości d6 +2
+!roll 2d6+1e                Dwie kości d6 każda wynik +2
+!roll 2d4+1 and 1d4         Dwa zestawy rzutów jeden dwóch kości d4 i wynik ich sumy powięszkony o 1 oraz rzut 1d4
+!roll 2d4+1e + 1d4          Suma wyniku rzutu 2 koścmi d4 każda powiększona o 1 i wyniku rzutu kością d4
+!roll 2d5+1 + 1d4 + 2d6 + 11d2 - 2 - 1d3 <-- ()                     (\d+)d(\d+)([+-]\d+)? matches patterns like 2d6+3
+
+
++2
+-2
++3+2d2
+2d2+3
+3+2d2
+
+ Narazie tylko 2d2+-2 ...

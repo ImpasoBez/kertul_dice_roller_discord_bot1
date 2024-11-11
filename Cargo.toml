@@ -1,0 +1,11 @@
+[package]
+name = "discord_diceroll_bot"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serenity = "0.12.2"  # This version might change, so check for the latest version on crates.io
+tokio = { version = "1", features = ["full"] }
+dotenv = "0.15"
+rand = "0.8"
+regex = "1"
