@@ -15,7 +15,7 @@ use regex::Regex;
 
 
 static DICE_ROLL_REGULAR_EX: LazyLock<Regex> = LazyLock::new(|| {
-    Regex::new(r"(?<numDice>\d+)d(?<numSides>\d+)(?<modifier>[+-]\d+)?").unwrap()
+    Regex::new(r"(?<numDice>\d+)?d?(?<numSides>\d+)?(?<modifier>[+-]\d+)?").unwrap()
 });
 
 
