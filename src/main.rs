@@ -79,13 +79,22 @@ impl Roll{
                 },
                 None => {},
             } 
-            match caps["numSides"].parse::<u8>(){
-                Ok(n) => faces = n,
-                Err(e) => faces = 0,
+            match caps.name("numSides"){
+                Some(x) => {
+                    match x.as_str().parse::<u8>(){
+                        Ok(n) => faces = n,
+                        Err(e) => faces = 0,
+                    }
+                },
+                None => {},
+                
             }
-            match caps["numDice"].parse::<usize>(){
-                Ok(n) => numOfDices = n,
-                Err(e) => numOfDices = 0,
+            match caps.name("numDice"){
+                Some(x) => match x.as_str().parse::<usize>(){
+                    Ok(n) => numOfDices = n,
+                    Err(e) => numOfDices = 0,
+                },
+                None => {}
             }
         }
 
